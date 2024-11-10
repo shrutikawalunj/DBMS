@@ -43,6 +43,4 @@ db.Journal.insertMany([{'book_id':1,'book_name':'JavacdOOP','amt':500,'status':'
 
 >	db.Journal.mapReduce(mapfunction,reducefunction,{'out':'new'});
 
->	db.Journal.mapReduce(mapfunction,reducefunction,{'out':'new'}).find().pretty();
-
 >	db.new.find().pretty();
