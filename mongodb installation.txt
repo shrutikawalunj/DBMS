@@ -1,0 +1,16 @@
+
+Step 2 – Install MongoDB on Fedora
+sudo dnf install mongodb-org mongodb-org-server 
+
+
+Step 3 – Start MongoDB Service
+sudo systemctl enable mongod.service 
+sudo systemctl start mongod.service 
+
+Once the service is started, check the current status with the following command.
+sudo systemctl status mongod.service 
+
+if status shows active then it is ready to execute program.
+
+open new window and type – mongo
+start to type and execute program.

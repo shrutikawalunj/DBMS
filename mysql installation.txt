@@ -1,0 +1,21 @@
+sudo dnf update
+
+
+To install MySQL, utilize the given command:
+sudo dnf install community-mysql-server
+
+
+To check the current status of the MySQL service, utilize the given command:
+systemctl status mysqld
+
+
+We will be using the following command to start the MySQL service:
+$ sudo systemctl start mysqld
+
+
+Now, let’s cross-check whether we have successfully started MySQL by using the given command:
+$ systemctl status mysqld
+
+
+Open new window and execute programs on mysql:
+sudo mysql
