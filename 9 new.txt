@@ -1,0 +1,52 @@
+//MongoDB Queries: Design and Develop MongoDB Queries using CRUD operations. (Use CRUD operations, SAVE method, logical operators etc.). 
+
+
+
+>       switched to db Anup
+
+>       db.createCollection('Student');
+
+>       db.Student.insertMany([{ 'Rno':'1','Name':'Atharva','Class':'TE COMP' },{ 'Rno':'2','Name':'Abhi','Class':'TE COMP' },{ 'Rno':'3','Name':'Akshay','Class':'TE COMP' },{ 'Rno':'4','Name':'chetan','Class':'TE COMP' },{ 'Rno':'5','Name':'Nikhil','Class':'TE COMP' },{ 'Rno':'6','Name':'Nikhil','Class':'TE COMP' }]);
+
+>	db.Student.find();
+
+>	db.Student.find().pretty();
+
+>	db.Student.update({'Name':'chetan'},{$set: {'Name':'ketan'}}); 
+
+>	db.Student.find().pretty();
+
+>	db.Student.remove({'ADD':'MP'}); 
+
+>	db.Student.find().pretty();
+
+>	db.Student.find().pretty();
+
+>	db.Student.find({$and:[{"Name":"Atharva"},{"Rno":"2"}]}).pretty();
+
+>	db.Student.find({$or:[{"Name":"Atharva"},{"Class":"TE COMP"}]}).pretty();
+
+>	db.Student.find({$nor:[{"Name":"Atharva"},{"Rno":"2"}]}).pretty();
+
+>       db.Student.find( {"Rno": { $not:{$lt:"3"}}}).pretty();
+
+>	db.Student.find( {"Rno": { $eq:"5"}}).pretty();
+
+>	db.Student.find( {"Rno": { $ne:"5"}}).pretty();
+
+>	db.Student.find( {"Rno": { $gt:"5"}}).pretty();
+
+>	db.Student.find( {"Rno": { $gte:"5"}}).pretty();
+
+>	db.Student.find( {"Rno": { $lt:"5"}}).pretty();
+
+>	db.Student.find( {"Rno": { $lte:"5"}}).pretty();
+
+>	db.Student.find( {"Rno": { $lt:"5",$gt:"2"}}).pretty();
+
+>	db.Student.find( {"Rno": { $lte:"5",$gte:"2"}}).pretty();
+
+>	db.Student.find( {"Rno": { $lte:"5",$gt:"2"}}).pretty();
+
+>	db.Student.find( {"Rno": { $lt:"5",$gte:"2"}}).pretty();
+
