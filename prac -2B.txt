@@ -1,0 +1,36 @@
+sudo systemctl start mysqld
+sudo systemctl status mysqld
+suso mysql
+
+> create table Employee(emp_no int,emp_name varchar(20),date date,position varchar(20));
+> alter table Employee add salary int;
+> insert into Employee values('01','abc','2018-07-11','clerk','50000');
+> insert into Employee values('02','abhi','2018-05-11','ceo','150000');
+> insert into Employee values('03','xyz','2018-05-21','hr','100000');
+> insert into Employee values('04','aqwgy','2018-06-21','te','10000');
+> insert into Employee values('05','sfhjfh','2018-07-21','gt','12000');
+> create table TE(emp_no int,emp_namevarchar(20),join_date date,position varchar(20),salary int);
+> insert into TE values('01','abc','2018-07-11','clerk','50000');
+> insert into TE values('02','abhi','2018-05-11','ceo','150000');
+> insert into TE values('03','xyz','2018-05-21','hr','100000');
+> insert into TE values('04','aqwgy','2018-06-21','te','10000');
+> insert into TE values('05','sfhjfh','2018-07-21','gt','12000');
+> select * from TE;
+> select * from Employee;
+> update TE set emp_name='gjgj' where emp_no='5';
+> select * from TE;
+> select * from Employee union select * from TE;
+> select * from Employee union all select * from TE;
+> select distinct emp_no from Employee where emp_no in(select emp_no from TE);
+> select * from Employee;
+> select * from TE;
+> select distinct emp_name from Employee where emp_name in(select emp_name from TE);
+> select * from Employee;
+> select * from TE;
+> select distinct emp_name from Employee where emp_name in(select emp_name from TE);
+> select min(salary) from Employee;
+> select max(salary) from Employee;
+> select sum(salary) from Employee;
+> select avg(salary) from Employee;
+
+
