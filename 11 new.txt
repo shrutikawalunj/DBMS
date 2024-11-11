@@ -1,7 +1,7 @@
 //MongoDB - Map reduces operations: Implement Map reduces operation with suitable example using MongoDB. 
 
 
-db.Journal.insertMany([{'book_id':1,'book_name':'JavacdOOP','amt':500,'status':'Available'},{'book_id':1,'book_name':'JavaOOP','amt':400,'status':'NotAvailable'},{'book_id':1,'book_name':'Java','amt':300,'status':'NotAvailable'},{'book_id':2,'book_name':'Java','amt':300,'status':'Available'},{'book_id':2,'book_name':'OOP','amt':200,'status':'Available'},{'book_id':2,'book_name':'C++','amt':200,'status':'Available'},{'book_id':3,'book_name':'C++','amt':150,'status':'Available'},{'book_id':3,'book_name':'C++','amt':200,'status':'NotAvailable'},{'book_id':4,'book_name':'OOP C++','amt':300,'status':'NotAvailable'},{'book_id':5,'book_name':'OOP C++','amt':400,'status':'Available'},{'book_id':5,'book_name':'C++','amt':400,'status':'Available'},{'book_id':5,'book_name':'C++ Java','amt':400,'status':'NotAvailable'}]);
+db.Journal.insertMany([{'book_id':1,'book_name':'JavacdOOP','amt':500,'status':'Available'},{'book_id':1,'book_name':'JavaOOP','amt':400,'status':'Not Available'},{'book_id':1,'book_name':'Java','amt':300,'status':'Not Available'},{'book_id':2,'book_name':'Java','amt':300,'status':'Available'},{'book_id':2,'book_name':'OOP','amt':200,'status':'Available'},{'book_id':2,'book_name':'C++','amt':200,'status':'Available'},{'book_id':3,'book_name':'C++','amt':150,'status':'Available'},{'book_id':3,'book_name':'C++','amt':200,'status':'Not Available'},{'book_id':4,'book_name':'OOP C++','amt':300,'status':'Not Available'},{'book_id':5,'book_name':'OOP C++','amt':400,'status':'Available'},{'book_id':5,'book_name':'C++','amt':400,'status':'Available'},{'book_id':5,'book_name':'C++ Java','amt':400,'status':'Not Available'}]);
 
 
 
@@ -37,7 +37,7 @@ db.Journal.insertMany([{'book_id':1,'book_name':'JavacdOOP','amt':500,'status':'
 
 >	db.Journal.insert({'book_id':5,'book_name':'C++ Java','amt':400,'status':'Not Available'}); 
 
->	var mapfunction=function(){ emit(this.book_id,this.amt)};
+>	var mapfunction=function(){ emit(this.book_id,this.amt);};
 
 >	var reducefunction=function(key,value){return Array.sum(value);};
 
