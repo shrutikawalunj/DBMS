@@ -1,0 +1,48 @@
+Assignment No: -6
+Title:-
+To create cursors: Implicit, Explicit Parameterized Cursor, Cursor FOR Loop.
+
+Learning Objectives:-
+To create implicit and explicit cursor.
+
+Learning Outcomes:-
+The ability to work with cursors to operate relational database.
+
+Theory:-
+Cursors:-
+To handle a result set inside a stored procedure, you use a cursor. A cursor allows you to iterate a
+set of rows returned by a query and process each row accordingly.
+Working with MySQL cursor.
+1. Declaration of Cursor : To declare a cursor you must use the DECLARE statement.
+Syntax : DECLARE cursor_name CURSOR FOR select_statement;
+2. Open a cursor statement : For open a cursor we must use the open statement. If we want to fetch rows from it you must open the cursor.
+Syntax : OPEN cursor_name;
+3. Cursor fetch statement : When we have to retrieve the next row from the cursor and move the cursor
+to next row then you need to fetch the cursor.
+Syntax : FETCH cursor_name INTO var_name;
+4. Cursor close statement : By this statement closed the open cursor.
+Syntax: CLOSE_name;
+By this statement we can close the previously opened cursor. If it is not closed explicitly then a
+cursor is closed at the end of compound statement in which that was declared.
+Implicit Cursors:
+Implicit cursors are automatically created by Oracle whenever an SQL statement is executed, when
+there is no explicit cursor for the statement. Programmers cannot control the implicit cursors and the
+information in it. Whenever a DML statement (INSERT, UPDATE and DELETE) is issued, an
+implicit cursor is associated with this statement. For INSERT operations, the cursor holds the data
+that needs to be inserted. For UPDATE and DELETE operations, the cursor identifies the rows that
+would be affected.
+
+Explicit Cursors:
+Explicit cursors are programmer-defined cursors for gaining more control overthe context area. An
+explicit cursor should be defined in the declaration section of the PL/SQL Block. It is created on a
+SELECT Statement which returns more than one row.
+The syntax for creating an explicit cursor is −
+CURSOR cursor_name IS select_statement;
+Working with an explicit cursor includes the following steps −
+ Declaring the cursor for initializing the memory
+ Opening the cursor for allocating the memory
+ Fetching the cursor for retrieving the data
+ Closing the cursor to release the allocated memory
+
+Conclusion:Thus we have studied all types
+of cursors in pl/sql.
