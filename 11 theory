@@ -1,0 +1,35 @@
+Assignment Name: -. MongoDB Map Reduce
+
+Title of Assignment: Implement Map reduce operation with suitable example using MongoDB.
+
+Theory: -
+Map-Reduce
+• Map-reduce is a data processing paradigm for condensing
+large volumes of data into useful aggregated results. For mapreduce operations, MongoDB provides the mapReduce database command.
+• Consider the following map-reduce operation:
+MapReduce:
+
+Map-Reduce:
+In very simple terms, the mapReduce command takes 2 primary inputs, the mapper function and the reducer function.
+A Mapper will start off by reading a collection of data and building a Map with only the required fields we wish to process and group them into one array based on the key.
+And then this key value pair is fed into a Reducer, which will process the values.
+Map-Reduce Syntax:
+db.collection.mapReduce(
+function() {emit(key, value);},
+function(key,values) {return reduceFunction},
+{
+out: collection, query: document, sort: document,
+limit: number
+}
+)
+Map-Reduce Syntax Explanation:
+The above map-reduce function will query the collection, and then map the output documents to the emit key-value pairs. After this, it is
+reduced based on the keys that have multiple values. Here, we have used the following functions and parameters.
+• Map: – It is a JavaScript function. It is used to map a value with a key and produces a key-value pair.
+• Reduce: – It is a JavaScript function. It is used to reduce or group together all the documents which have the same key.
+• Out: – It is used to specify the location of the map-reduce query output.
+• Query: – It is used to specify the optional selection criteria for selecting documents.
+• Sort: – It is used to specify the optional sort criteria.
+• Limit: – It is used to specify the optional maximum number of documents which are desired to be returned.
+
+Conclusion: Here we performed Mapreduce operation with suitable example using MongoDB.
